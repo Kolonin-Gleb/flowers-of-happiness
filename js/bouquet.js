@@ -19,7 +19,7 @@ function Flower(name, size, color)
     // methods
     this.info = function info()
     {
-        alert("Мои данные: " + name + size + color);
+        //alert("Мои данные: " + name + size + color);
     };
 }
 
@@ -40,6 +40,14 @@ let grass = [];
 for (let grass = 0; grass < array.length; grass++)
 {
     const element = array[grass];
+}
+
+
+// Функция для открытия конструктора сайта
+function createBouquet()
+{
+    // Сделать блок на сайте видимым
+    alert("Букет создан!");
 }
 
 
