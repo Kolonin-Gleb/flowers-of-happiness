@@ -1,82 +1,159 @@
+/*
+Селекторы по эл. тегов - это плохо.
+Используй селекторы по классам
+*/
+
 /*Стили для основной страницы*/
 
 body {
-    font-size: 24px; /*Default fonts for site*/
+    /*Шрифты по умолчанию для сайта*/
+    font-size: 24px;
     font-family: 'Times New Roman', Arial;
     color:white;
+    /*Фон сайта*/
     background-color: rgb(94, 174, 83);
 }
 
-nav {
-    width: calc(100% - 5px);
+/*Стили для главного меню*/
+.top-menu {
+    width: calc(100% - 5px); /*Расчёт ширины блока*/
+    height: auto; /*Автоматический расчёт высоты блока*/
+    background-color: rgb(130, 140, 199);
+    /*Внешние отступы*/
     margin-left: 10px;
     margin-right: 10px;
+
+    /*Закрепление элемента при прокрутке*/
     position: fixed;
+
+    /*Относительное позиционирование элемента*/
     left: 0px;
-    top: -25px;
+    right: 0px;
+    top: 0px;
+
+    display: flex;
+    justify-content: space-around;
 }
 
-/*Styles for ul inside nav*/
-nav > ul {
-    font-size: 24px;
-    font-family: 'Times New Roman', Times, serif;
-    flex-direction: row;
-    list-style: none;
-    background-color: aquamarine;
+/*Стили для элементов главного меню*/
+.top-menu-elements {
+    flex-direction: row; 
+    list-style: none; /*Убрать маркеры списка*/
+    /* background-color: aquamarine; */
+
+
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    width: 98%;
-}
-/*styles for class elements <li> of class menu*/
-.menu li a:hover {
-    color:white;
 }
 
-img {
-    margin: 0px 20px 20px 20px;
+.top-menu-elements li {
+    margin-left: 13.5px;
+    margin-right: 13.5px;
 }
 
-audio {
-    width: 640px;
+.top-menu-elements li a{
+    text-decoration: none;
+    color: #fff;
 }
 
+
+/*Для ссылки логотипа сайта*/
+.menu-logo-link {
+    display: inline-block;
+    border-radius: 20px; /*Как скруглить края изображения*/
+}
+
+/*Для лототипа сайта*/
+.menu-logo-img {
+    border-radius: 50px;
+}
+
+h2.heading {
+    text-align: center;
+    font-size: 36px;
+}
+
+div.quote p {
+    font-size: 48px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+div.images {
+    display: grid; /*Представляетм блок в виде сетки*/
+    grid-template-columns: 1fr 1fr 1fr; /*Сетка будет состоять из 3 колонок одного размера*/
+    justify-content: space-between;
+}
+
+div.images img {
+    /*Картинки будут занимать часть от колонки*/
+    max-width: 95%;
+    max-height: 95%;
+    border-radius: 25px;
+
+    /*Размещение изображения по центру ячейки*/
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+/*Для тегов p с классом text*/
 p.text {
     display: flex;
     margin-right: 50px;
 }
 
-/*Change color of highlight*/
+/*Для h2 с id = our_flowers*/
+h2#our_flowers {
+    margin-top: 150px;
+}
+
+hr.line {
+    height: 20px;
+    background-color: rgb(94, 174, 83);
+}
+
+/*Изменения цвета для веделения*/
 ::selection {
     background-color:#ffee38;
     color:#191919
 }
 
-h2 {
-    text-align: center;
-    font-size: 36px;
-    font-family: 'Times New Roman', Arial;
+
+/*Конструктор букета*/
+
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    font: 20px sans-serif;
 }
 
-hr {
-    height: 20px;
-    background-color: rgb(94, 174, 83);
+.container {
+    padding: 50px; /*Внешний отступ от контента*/
+    width: 700px;
+    box-shadow: inset 1px  1px 5px 0 #0006;
+    border-radius: 20px;
+
+    display: flex;
+    gap: 20px; /**/
+    flex-wrap: wrap;
 }
 
-.btn {
-    width: 100%;
-    text-align: center;
-    background: gray;
-    color: rgb(234, 247, 51);
-    font-size: 50px;
-    border-radius: 5px;
+/**/
+.flower {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 0 #0006;
 
-    /*Change color on hover*/
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    display: flex;
+    flex-direction: column; /*Разбивает по тегам*/
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
 }
-
-.btn:hover {
-    background-color: rgb(94, 174, 83);;
-    color: white;
-}
+ .flower h3, .flower p {
+    margin: 0;
+ }

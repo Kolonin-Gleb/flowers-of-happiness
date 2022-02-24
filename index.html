@@ -19,74 +19,67 @@
 <body>
     <!-- Закрепленная шапка сайта -->
     <header>
-        <!-- Навигационное меню -->
-        <nav>
-            <ul class='menu'>
+        <nav class="top-menu">
+
+            <h1>Цветы счастья</h1>
+
+            <ul class="top-menu-elements">
                 <li><a href="#our_flowers">Наши цветы</a></li>
                 <li><a href="#create_bouquet">Конструктор букета</a></li>
                 <li><a href="#contacts">Контакты</a></li>
             </ul>
+            <a class="menu-logo-link" href=""> <img class="menu-logo-img" src="./Images/logo.png" width="100" height="100" title="Logo" alt="Logo"></a>
+
         </nav>
     </header>
 
-    <br><br><br>
+    <h2 class="heading" id="our_flowers">Наши цветы</h2>
 
-    <h2 id="our_flowers">Наши цветы</h2>
-
-    <p class="text">
-        <!-- <img src="./Images/Article/Elon Musk.jpg" width="500" height="750" title="Elon Musk" alt="Elon Musk"> -->
-        
-        <span>
-            Наши цветы <br>
-            Наши цветы <br>
-            Наши цветы <br>
-            Наши цветы <br>
-            Наши цветы <br>
-            Наши цветы <br>
-        </span>
-    </p>
-
-    <hr>
-
-    <h2 id="create_bouquet">Конструктор букета</h2>
-    
-    <p class="text">
-        <!-- <img src="./Images/Article/Elon Musk.jpg" width="500" height="750" title="Elon Musk" alt="Elon Musk"> -->
-        
-        <span>
-            Создать букет <br>
-            Создать букет <br>
-            Создать букет <br>
-            Создать букет <br>
-        </span>
-    </p>
-
-    <hr>
-
-    <h2 id="contacts">Контакты</h2>
-
-    <p class="text">
-        <!-- <img src="./Images/Article/Elon Musk.jpg" width="500" height="750" title="Elon Musk" alt="Elon Musk"> -->
-        
-        <span>
-            Наши контакты <br>
-            Наши контакты <br>
-            Наши контакты <br>
-            Наши контакты <br>
-            Наши контакты <br>
-            Наши контакты <br>
-        </span>
-    </p>
-
-    <hr>
-
-    
-    <button onclick="createBouquet()">Открыть конструктор букета</button>
-
-    <div id="#bouquetConstructor">
-        <p>Some text</p>
+    <div class="quote">
+        <p>Цветы счастья - </p>
+        <p>всегда для вас!</p>
     </div>
 
+    <div class="images">
+        <img src="./Images/other/bouquet_example.png" title="bouquet 1" alt="bouquet 1">
+        <img src="./Images/other/bouquet_example2.png" title="bouquet 2" alt="bouquet 2">
+        <img src="./Images/other/happy_customer.png" title="happy customer" alt="happy customer">
+    </div>
+
+    <p class="text">
+        <span>
+            Наши цветы - самые лучшие! <br>
+            Наши цветы - самые красивые!<br>
+            Наши цветы - самые ароматные! <br>
+        </span>
+    </p>
+
+    <hr class="line">
+
+    <h2 class="heading" id="create_bouquet">Конструктор букета</h2>
+    
+    <div class="container-wrapper">
+        <div class="container">
+            <!-- Будет заполняться с помощью JS -->
+        </div>
+    </div>
+
+
+
+    <hr class="line">
+
+    <h2 class="heading" id="contacts">Контакты</h2>
+
+    <p class="text">        
+        <span>
+            Телефон: +7-916-438-48-48 <br>
+            ВК: https://vk.com/spaceship22 <br>
+            Телеграм: https://t.me/Spaceship24 <br>
+        </span>
+    </p>
+
+    <hr class="line">
+    
     <!-- Connect JS to this page  -->
     <script src="js\bouquet.js"></script>
 </body>

@@ -1,53 +1,63 @@
-// Дано:
-// розы (маленькие - 4 расцветки, большие - 7 расцветок)
-// трава (5 видов)
-// лилии - 3 цвета
-// тюльпаны - 3 цвета
-// пионы - 2 цвета
-// герберы - 5 цветов
+// Добавить img и путь к файлу
+// Это позволит Использовать мои картинки, а не импортированные иконки
 
-// Функция-конструктор цветка
-function Flower(name, size, color)
-{
-    // properties
-    this.name = name;
-    this.size = size;
-    this.color = color;
-    
-    // getters and setters
-
-    // methods
-    this.info = function info()
-    {
-        //alert("Мои данные: " + name + size + color);
-    };
-}
+// // Дано:
+// // розы (маленькие - 4 расцветки, большие - 7 расцветок)
+// // трава (5 видов)
+// // лилии - 3 цвета
+// // тюльпаны - 3 цвета
+// // пионы - 2 цвета
+// // герберы - 5 цветов
 
 
-let rose = new Flower("rose", "small", "red");
-rose.info();
+// Цветы, что есть в наличии
 
-let rosesAmmount = 4;
+let flowers = [
+    {name: "Lilies", color: "red", price: 150, img: "./Images/flowers/Lilies.png"},
+    {name: "Lilies", color: "white", price: 150, img: "./Images/flowers/Lilies.png"},
+    {name: "Lilies", color: "yellow", price: 150, img: "./Images/flowers/Lilies.png"},
+    {name: "Lilies", color: "pink", price: 150, img: "./Images/flowers/Lilies.png"},
+    {name: "Lilies", color: "violent", price: 150, img: "./Images/flowers/Lilies.png"},
 
-let roses = [];
-for (let flower = 0; flower < rosesAmmount; flower++)
-{
-    roses[flower] = new Flower("rose", "small", "red");
-}
+    {name: "Gerbera", color: "red", price: 200, img: "./Images/flowers/Gerberas.png"},
+    {name: "Gerbera", color: "blueviolent", price: 200, img: "./Images/flowers/Gerberas.png"},
+    {name: "Gerbera", color: "orange", price: 200, img: "./Images/flowers/Gerberas.png"},
+    {name: "Gerbera", color: "magenta", price: 200, img: "./Images/flowers/Gerberas.png"},
+    {name: "Gerbera", color: "pink", price: 200, img: "./Images/flowers/Gerberas.png"},
 
-let grassAmmount = 0;
-let grass = [];
-for (let grass = 0; grass < array.length; grass++)
-{
-    const element = array[grass];
-}
+    {name: "Rose", color: "red", price: 300, img: ""},
+    {name: "Rose", color: "white", price: 300, img: ""},
 
+    {name: "Grass", color: "green", price: 102.49, img: ""},
+];
 
-// Функция для открытия конструктора сайта
-function createBouquet()
-{
-    // Сделать блок на сайте видимым
-    alert("Букет создан!");
-}
+/*
+Дано:
+1 розы (маленькие - 4 расцветки, большие - 7 расцветок)
+2 лилии - 3 цвета
+3 тюльпаны - 3 цвета
+4 пионы - 2 цвета
+5 герберы - 5 цветов
+трава (5 видов)
+*/
 
+// 6 в ряд 
+
+let block = document.querySelector(".container");
+
+let flowersHtml = "";
+
+flowers.forEach(fl => {
+    flowersHtml += `
+    <div class="flower ${fl.name}"
+        style="background-color: ${fl.color}">
+        <h3>${fl.name}</h3>
+        <img src="${fl.img}" alt="${fl.name}" width="50px" height="50px">
+        <p>${fl.price}</p>
+    </div>       
+    `
+});
+
+// Вставляем в элемент данные из массива объектов, чтобы отобразить их
+block.innerHTML = flowersHtml;
 
