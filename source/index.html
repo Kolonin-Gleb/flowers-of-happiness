@@ -25,7 +25,7 @@
 
             <ul class="top-menu-elements">
                 <li><a href="#our_flowers">Наши цветы</a></li>
-                <li><a href="#create_bouquet">Конструктор букета</a></li>
+                <li><a href="#buy">Ассортимент</a></li>
                 <li><a href="#contacts">Контакты</a></li>
             </ul>
             <a class="menu-logo-link" href=""> <img class="menu-logo-img" src="./Images/logo.png" width="100" height="100" title="Logo" alt="Logo"></a>
@@ -56,25 +56,42 @@
 
     <hr class="line">
 
-    <h2 class="heading" id="create_bouquet">Конструктор букета</h2>
+    <h2 class="heading" id="buy">Ассортимент</h2>
     
+    <!-- Здесь будет располагаться ассортимент и корзина покупателя -->
+
     <div class="container-wrapper">
+        <div>
+            <!-- В будущем здесь будет фильтр по цветам -->
+            <p>Выберите цвет, растения </p> 
+            <p>которого вы хотите купить</p> 
+            <p><input name="color" type="radio" value="Белый"> Белый</p>
+            <p><input name="color" type="radio" value="Бежевый"> Бежевый</p>
+            <p><input name="color" type="radio" value="Розовый"> Розовый</p>
+            <p><input name="color" type="radio" value="Бежевый"> Красный</p>
+            <p><input name="color" type="radio" value="Розовый"> Синий</p>
+            <p><input type="submit" value="Выбрать"></p>
+        </div>
+
         <div class="container">
             <!-- Будет заполняться с помощью JS -->
+            <!-- Кликая по карточкам с цветами их число в наличии должно уменьшаться. -->
+            <!-- Достигнув 0 должна пропасть возможность добавления в корзину -->
+
+            <!-- Корзина будет реализована в виде ещё 1 окна, как ассортимент, куда будут добавляться карточки -->
+            <!-- Должна быть реализована возможность удалить товары из корзины и вернуть их в ассортимент! -->
         </div>
     </div>
 
-
-
     <hr class="line">
 
-    <h2 class="heading" id="contacts">Контакты</h2>
+    <h2 class="heading" id="contacts">Наши контакты:</h2>
 
     <p class="text">        
         <span>
-            Телефон: +7-916-438-48-48 <br>
-            ВК: https://vk.com/spaceship22 <br>
-            Телеграм: https://t.me/Spaceship24 <br>
+            <a href="tel:+7-916-438-17-12">+7-916-438-17-12 </a> <br>
+            <a href="https://vk.com/spaceship22">ВКонтакте </a> <br>
+            <a href="https://t.me/Spaceship24">Телеграм </a>    <br>
         </span>
     </p>
 

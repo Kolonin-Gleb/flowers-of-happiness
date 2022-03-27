@@ -1,47 +1,36 @@
 // Добавить img и путь к файлу
 // Это позволит Использовать мои картинки, а не импортированные иконки
 
-// // Дано:
-// // розы (маленькие - 4 расцветки, большие - 7 расцветок)
-// // трава (5 видов)
-// // лилии - 3 цвета
-// // тюльпаны - 3 цвета
-// // пионы - 2 цвета
-// // герберы - 5 цветов
-
-
 // Цветы, что есть в наличии
+// Где указывается количество, что есть в наличии?
+// Число, что есть в наличии должно храниться в БД!
+// Также, как и цена, цвет, и название!
 
 let flowers = [
-    {name: "Lilies", color: "red", price: 150, img: "./Images/flowers/Lilies.png"},
-    {name: "Lilies", color: "white", price: 150, img: "./Images/flowers/Lilies.png"},
-    {name: "Lilies", color: "yellow", price: 150, img: "./Images/flowers/Lilies.png"},
-    {name: "Lilies", color: "pink", price: 150, img: "./Images/flowers/Lilies.png"},
-    {name: "Lilies", color: "violent", price: 150, img: "./Images/flowers/Lilies.png"},
+    {name: "Gerbera", color: "white", count: 10, price: 200, img: "./Images/flowers/Gerberas.png"},
+    {name: "Gerbera", color: "yellow", count: 10, price: 200, img: "./Images/flowers/Gerberas.png"},
+    {name: "Gerbera", color: "pink", count: 10, price: 200, img: "./Images/flowers/Gerberas.png"},
+    {name: "Gerbera", color: "red", count: 10, price: 200, img: "./Images/flowers/Gerberas.png"},
+    {name: "Gerbera", color: "blue", count: 10, price: 200, img: "./Images/flowers/Gerberas.png"},
 
-    {name: "Gerbera", color: "red", price: 200, img: "./Images/flowers/Gerberas.png"},
-    {name: "Gerbera", color: "blueviolent", price: 200, img: "./Images/flowers/Gerberas.png"},
-    {name: "Gerbera", color: "orange", price: 200, img: "./Images/flowers/Gerberas.png"},
-    {name: "Gerbera", color: "magenta", price: 200, img: "./Images/flowers/Gerberas.png"},
-    {name: "Gerbera", color: "pink", price: 200, img: "./Images/flowers/Gerberas.png"},
+    {name: "Lilies", color: "white", count: 10, price: 150, img: "./Images/flowers/Lilies.png"},
+    {name: "Lilies", color: "yellow", count: 10, price: 150, img: "./Images/flowers/Lilies.png"},
+    {name: "Lilies", color: "red", count: 10, price: 150, img: "./Images/flowers/Lilies.png"},
 
-    {name: "Rose", color: "red", price: 300, img: ""},
-    {name: "Rose", color: "white", price: 300, img: ""},
+    {name: "Piones", color: "white", count: 10, price: 150, img: "./Images/flowers/Piones.png"},
+    {name: "Piones", color: "yellow", count: 10, price: 150, img: "./Images/flowers/Piones.png"},
+    {name: "Piones", color: "red", count: 10, price: 150, img: "./Images/flowers/Piones.png"},
 
-    {name: "Grass", color: "green", price: 102.49, img: ""},
+    {name: "Rose", color: "white", count: 10, price: 300, img: "./Images/flowers/Roses.png"},
+    {name: "Rose", color: "yellow", count: 10, price: 300, img: "./Images/flowers/Roses.png"},
+    {name: "Rose", color: "pink", count: 10, price: 300, img: "./Images/flowers/Roses.png"},
+    {name: "Rose", color: "red", count: 10, price: 300, img: "./Images/flowers/Roses.png"},
+
+    {name: "Grass", color: "green", count: 10, price: 102.49, img: "./Images/flowers/Grass_1.png"},
+    {name: "Grass", color: "green", count: 10, price: 102.49, img: "./Images/flowers/Grass_2.png"},
+    {name: "Grass", color: "green", count: 10, price: 102.49, img: "./Images/flowers/Grass_3.png"},
+    {name: "Grass", color: "green", count: 10, price: 102.49, img: "./Images/flowers/Grass_4.png"},
 ];
-
-/*
-Дано:
-1 розы (маленькие - 4 расцветки, большие - 7 расцветок)
-2 лилии - 3 цвета
-3 тюльпаны - 3 цвета
-4 пионы - 2 цвета
-5 герберы - 5 цветов
-трава (5 видов)
-*/
-
-// 6 в ряд 
 
 let block = document.querySelector(".container");
 
@@ -53,7 +42,8 @@ flowers.forEach(fl => {
         style="background-color: ${fl.color}">
         <h3>${fl.name}</h3>
         <img src="${fl.img}" alt="${fl.name}" width="50px" height="50px">
-        <p>${fl.price}</p>
+        <p>Цена: ${fl.price}</p>
+        <p>В наличии: ${fl.count}</p>
     </div>       
     `
 });

@@ -1,7 +1,9 @@
 # Для разработки сайта 
 from flask import Flask
+
 # Для получения и ответа на Ajax запросы в формате json
 from flask import request, jsonify
+
 # Для работы с БД
 import pymysql
 from pymysql.cursors import DictCursor

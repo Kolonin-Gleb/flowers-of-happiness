@@ -16,12 +16,11 @@ body {
 
 /*Стили для главного меню*/
 .top-menu {
-    width: calc(100% - 5px); /*Расчёт ширины блока*/
+    width: calc(100% - 60px); /*Расчёт ширины блока*/
     height: auto; /*Автоматический расчёт высоты блока*/
     background-color: rgb(130, 140, 199);
-    /*Внешние отступы*/
-    margin-left: 10px;
-    margin-right: 10px;
+    /*Внешние отступы автоматические (одинаковые) для справа и слева*/
+    margin: auto;
 
     /*Закрепление элемента при прокрутке*/
     position: fixed;
@@ -111,7 +110,7 @@ h2#our_flowers {
 
 hr.line {
     height: 20px;
-    background-color: rgb(94, 174, 83);
+    background-color: rgb(63, 126, 52);
 }
 
 /*Изменения цвета для веделения*/
@@ -131,9 +130,10 @@ hr.line {
 
 .container {
     padding: 50px; /*Внешний отступ от контента*/
-    width: 700px;
+    width: 1100px;
     box-shadow: inset 1px  1px 5px 0 #0006;
     border-radius: 20px;
+    background-color: rgb(4, 55, 4);
 
     display: flex;
     gap: 20px; /**/
@@ -142,8 +142,8 @@ hr.line {
 
 /**/
 .flower {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 20px;
     box-shadow: 0 0 5px 0 #0006;
 
@@ -155,5 +155,7 @@ hr.line {
     cursor: pointer;
 }
  .flower h3, .flower p {
+    color: #191919;
     margin: 0;
  }
+ 
